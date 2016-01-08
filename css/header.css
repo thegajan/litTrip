@@ -16,7 +16,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
 }
 
 header {
-    border-bottom: 1px solid #ecf0f1;
+    /*border-bottom: 1px solid #ecf0f1;*/
 }
 
 body {
@@ -46,7 +46,10 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     width: 100%;
-    border-bottom: 1px solid #bdc3c7;
+    /*border-bottom: 1px solid #bdc3c7;*/
+    background-color: #3498db;
+    position: absolute;
+    z-index: 9999;
 }
 
 header:after {
@@ -56,14 +59,12 @@ header:after {
 }
 
 header #logo {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
     font-weight: 300;
-    float: left;
-    color: #27ae60;
+    text-align: center;
+    color: #ffffff;
     padding-top: 15px;
     font-size: 30px;
-    font-style: 700;
     padding-left: 15px;
     padding-bottom: 15px;
-    display: inline-block;
 }

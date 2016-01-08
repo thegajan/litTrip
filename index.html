@@ -27,27 +27,26 @@
 <script>
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 37.7749295, lng: -122.4194155},
+//            center: {lat: 37.7749295, lng: -122.4194155},
+            center: {lat: 38.212832, lng: -116.619873},
             zoom: 6,
             disableDefaultUI: true,
             zoomControl: true
         });
 
         var infoWindow = new google.maps.InfoWindow({map: map});
-        var flightPlanCoordinates = [
-            {lat: 37.315505, lng: -121.930026},
-            {lat: 36.974117, lng: -122.030796},
-            {lat: 36.904607, lng: -121.771088},
-            {lat: 36.678057, lng: -121.641998},
-            {lat: 36.600238, lng: -121.894676},
-            {lat: 34.420831, lng: -119.698190},
-            {lat: 34.052234, lng: -118.243685},
-            {lat: 33.538652, lng: -112.185987},
-            {lat: 36.169941, lng: -115.139830},
-            {lat: 39.196980, lng: -120.235705},
-            {lat: 38.581572, lng: -121.494400},
-            {lat: 37.315505, lng: -121.930026}
-        ];
+
+        var sanjose = {lat: 37.315505, lng: -121.930026},
+                la = {lat: 34.052234, lng: -118.243685},
+                glen = {lat: 33.538652, lng: -112.185987},
+                lv = {lat: 36.169941, lng: -115.139830},
+                sv = {lat: 39.196980, lng: -120.235705},
+                sc = {lat: 36.974117, lng: -122.030796},
+                sb = {lat: 34.420831, lng: -119.698190},
+                sac = {lat: 38.581572, lng: -121.494400};
+        mon = {lat: 36.600238, lng: -121.894676};
+
+        var flightPlanCoordinates = [sanjose, sc, sb, la, glen, lv, sv, sac, sanjose];
         var flightPath = new google.maps.Polyline({
             path: flightPlanCoordinates,
             geodesic: true,
@@ -63,18 +62,7 @@
 //            google.maps.event.addListener(map, 'click', function(event) {
 //                addMarker(event.latLng, map);
 //            });
-
-        // Add a marker at the center of the map.
-        var sanjose = {lat: 37.315505, lng: -121.930026};
-        la = {lat: 34.052234, lng: -118.243685},
-                glen = {lat: 33.538652, lng: -112.185987},
-                lv = {lat: 36.169941, lng: -115.139830},
-                sv = {lat: 39.196980, lng: -120.235705},
-                sc = {lat: 36.974117, lng: -122.030796},
-                sb = {lat: 34.420831, lng: -119.698190},
-                sac = {lat: 38.581572, lng: -121.494400};
-        mon = {lat: 36.600238, lng: -121.894676};
-
+        // Add a marker at the center of the map
         addMarker(sanjose, map);
         addMarker(sc, map);
         addMarker(mon, map);
