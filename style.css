@@ -1,4 +1,7 @@
 #sideInfo {
   height: 100%;
   width: 400px;
+  background-color: #fff;
+  float: right;
+  position: absolute;
 }
