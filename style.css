@@ -3,7 +3,7 @@
   height: 100%;
   width: 400px;
   background-color: #fff;
-  float: right;
+  right: 0;
   position: absolute;
   z-index: 9999;
 }
