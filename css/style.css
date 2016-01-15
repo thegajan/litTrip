@@ -5,13 +5,14 @@ html {
 
 #sideInfo {
     top: 85px;
-    height: 88vh;
+    height: 88%;
     width: 400px;
     background-color: #fff;
     right: 0;
     position: absolute;
     z-index: 9999;
     overflow-y: auto;
+    word-wrap: break-word;
 }
 
 #title {
@@ -76,4 +77,15 @@ h1 {
 h2 {
     padding: 10px 0;
     font-weight: 600;
+}
+
+h6{
+    border-top: 1px solid #000;
+    font-size: 15px;
+    padding: 10px 0;
+}
+#citations{
+    /*list-style: decimal;*/
+    font-size: 15px;
+
 }
